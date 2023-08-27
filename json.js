@@ -34,3 +34,10 @@ console.log(shop);
 
 const shopJSON = JSON.stringify(shop);
 console.log(shopJSON);
+
+
+/// JSON.Parse:::: convert  json string to main object::
+
+
+const shopObject = JSON.parse(shopJSON);
+console.log(shopObject);
