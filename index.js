@@ -33,3 +33,27 @@ function displayUser3(users){
     }
 
 }
+
+
+//
+
+function loadUsers4(){
+    fetch("https://jsonplaceholder.typicode.com/users")
+    .then( res => res.json())
+    .then(users => displayUser3(users) )
+}
+
+function displayUser3(users){
+    
+
+    const userId = document.getElementById("user-id");
+    for( const user of users){
+        console.log(user.name);
+        const li = document.createElement("li");
+        li.classList.add("user")
+        li.innerText = user.name ;
+        
+        userId.appendChild(li)
+
+    }
+}
